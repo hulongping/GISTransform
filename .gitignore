@@ -2,4 +2,6 @@
 .gitignore
 .idea/
 GISTransform.iml
+demodata/
 
+out/

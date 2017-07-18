@@ -138,23 +138,18 @@ public class CoordinateUtil {
 
 
     public static void main(String[] args){
-        double lon=121.4;
-        double lat=31.2;
+        double lon=121.385516;
+        double lat=31.220919;
 
 
 
 
         //验证两次转换是否相等
-        System.out.println("WGS1984 ==> GCJ02");
-        double[] gcj02Coors = wgs84Togcj02(lon,lat);
-        double[] wgs1984Coors = gcj02towgs84(gcj02Coors[0],gcj02Coors[1]);
-        System.out.println(wgs1984Coors[0]+","+wgs1984Coors[1]);
+        double[] wgsCoors = gcj02towgs84(lon,lat);
+        System.out.println(wgsCoors[0]+","+wgsCoors[1]);
 
 
-        System.out.println("GCJ02 ==> BD09");
-        double[] bd09Coors=gcj02Tobd09(gcj02Coors[0],gcj02Coors[1]);
-        double[] gcj02CoorsFromBd=bd09Togcj02(bd09Coors[0],bd09Coors[1]);
-        System.out.println(gcj02CoorsFromBd[0]+","+gcj02CoorsFromBd[1]);
+
 
 
 
